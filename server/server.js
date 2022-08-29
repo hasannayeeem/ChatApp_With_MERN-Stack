@@ -4,14 +4,17 @@ const { chats } = require("./data/data");
 const dotenv = require("dotenv");
 dotenv.config();
 const cors = require('cors');
-
+const connectDB = require('./config/db');
 
 
 // middleware
 app.use(cors())
 app.use(express.json())
 
-
+// env variables
+const USERNAME = process.env.DB_USERNAME
+const PASSWORD = process.env.DB_PASSWORD
+connectDB(USERNAME, PASSWORD)
 
 app.get("/", (req, res) => {
     res.send("API is running..");
