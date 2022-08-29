@@ -1,0 +1,2 @@
+// chatName
+// isGroupChat
