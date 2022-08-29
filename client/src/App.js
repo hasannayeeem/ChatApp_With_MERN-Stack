@@ -8,8 +8,6 @@ import HomePage from './pages/HomePage';
 function App() {
   return (
     <div className="App">
-      <p>bismillahirrahmanirrahim</p>
-      <Button colorScheme='blue'>Button</Button>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/chats' element={<ChatPage />} />
